@@ -1,0 +1,34 @@
+.navigation {
+  height: 159px;
+  background-color: #0fa85f;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.logo {
+  margin: 0 auto;
+}
+.ruskazWrap{
+	display: flex;
+	align-items: center;
+	gap: 46px;
+	position: absolute;
+	top: 28%;
+	left: 74%;
+	
+}
+.rus {
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 124px;
+  height: 63px;
+  background-color: #ffffff;
+  color: #0fa85f;
+  font-size: 36px;
+}
+.kaz {
+  font-size: 36px;
+  color: #ffffff;
+}

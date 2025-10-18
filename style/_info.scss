@@ -1,0 +1,47 @@
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  margin: 54px auto 20px;
+  font-size: 34px;
+  font-weight: bold;
+  color: #0fa85f;
+}
+h1 span {
+  color: #000;
+}
+.infoWrap {
+  display: flex;
+  align-items: center;
+}
+.infoFirst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.infoNumber {
+  color: #0fa85f;
+  font-size: 56px;
+}
+.infoIcon {
+  margin: 15px 0 18px;
+  color: #ffffff;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #0fa85f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.infoDiscription {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}

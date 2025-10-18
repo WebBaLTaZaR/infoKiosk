@@ -1,0 +1,37 @@
+@import "nool.scss";
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/SegoeUI-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/SegoeUI-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/SegoeUI-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/SegoeUI-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+body {
+  width: 1080px;
+  font-family: "Segoe UI", sans-serif;
+}
+@import "nav.scss";
+@import "main.scss";
+@import "info.scss";
+@import "services.scss";
+@import "video.scss";

@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  background: none;
+  border: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/SegoeUI-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/SegoeUI-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/SegoeUI-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/SegoeUI-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+body {
+  width: 1080px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.navigation {
+  height: 159px;
+  background-color: #0fa85f;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.ruskazWrap {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+  position: absolute;
+  top: 28%;
+  left: 74%;
+}
+
+.rus {
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 124px;
+  height: 63px;
+  background-color: #ffffff;
+  color: #0fa85f;
+  font-size: 36px;
+}
+
+.kaz {
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 54px auto 20px;
+  font-size: 34px;
+  font-weight: bold;
+  color: #0fa85f;
+}
+
+h1 span {
+  color: #000;
+}
+
+.infoWrap {
+  display: flex;
+  align-items: center;
+}
+
+.infoFirst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoNumber {
+  color: #0fa85f;
+  font-size: 56px;
+}
+
+.infoIcon {
+  margin: 15px 0 18px;
+  color: #ffffff;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #0fa85f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.infoDiscription {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sevices {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 89px;
+}
+
+.mainServices {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.servicesWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sevice {
+  font-size: 30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  width: 920px;
+  height: 90px;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: center;
+}
+
+.serviceItem img {
+  margin: auto 46px;
+}
+
+.serviceCheck {
+  margin-right: 50px;
+}
+
+.video {
+  width: 920px;
+  height: 823px;
+  background-color: black;
+  margin: 50px auto 0;
+}
