@@ -1,0 +1,2 @@
+# infoKiosk
+terminal SvoyDom
