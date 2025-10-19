@@ -27,11 +27,24 @@
   font-style: italic;
 }
 body {
+  height: 1920px;
   width: 1080px;
+  margin: 0 auto;
   font-family: "Segoe UI", sans-serif;
 }
+#content {
+}
+#returnButton {
+  position: absolute;
+  top: 18%;
+  left: 3%;
+  z-index: 5;
+}
+#returnButton.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 @import "nav.scss";
-@import "main.scss";
 @import "info.scss";
 @import "services.scss";
 @import "video.scss";
