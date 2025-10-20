@@ -19,28 +19,7 @@ video.addEventListener("ended", () => {
   video.play();
 });
 
-function adjustServiceLayout() {
-  const container = document.querySelector(".listServices");
-  const items = container.querySelectorAll(".otherServiceItem");
-  const count = items.length;
 
-  container.classList.add("many-items");
-
-  if (count <= 4) {
-    container.style.gridTemplateColumns = "1fr";
-    container.style.gridTemplateRows = `repeat(${count}, 1fr)`;
-  } else if (count <= 8) {
-    container.style.gridTemplateColumns = "repeat(2, 1fr)";
-    container.style.gridTemplateRows = "repeat(4, 1fr)";
-  } else if (count <= 12) {
-    container.style.gridTemplateColumns = "repeat(3, 1fr)";
-    container.style.gridTemplateRows = "repeat(4, 1fr)";
-  } else {
-    container.style.gridTemplateColumns = "repeat(4, 1fr)";
-    container.style.gridTemplateRows = "repeat(4, 1fr)";
-  }
-}
-document.addEventListener("DOMContentLoaded", adjustServiceLayout);
 
 
 
