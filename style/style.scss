@@ -1,28 +1,28 @@
 @import "nool.scss";
 @font-face {
   font-family: "Segoe UI";
-  src: url("assets/fonts/SegoeUI-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/SegoeUI-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Segoe UI";
-  src: url("assets/fonts/SegoeUI-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/SegoeUI-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Segoe UI";
-  src: url("assets/fonts/SegoeUI-Italic.ttf") format("truetype");
+  src: url("../assets/fonts/SegoeUI-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Segoe UI";
-  src: url("assets/fonts/SegoeUI-BoldItalic.ttf") format("truetype");
+  src: url("../assets/fonts/SegoeUI-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
@@ -32,12 +32,10 @@ body {
   margin: 0 auto;
   font-family: "Segoe UI", sans-serif;
 }
-#content {
-}
 #returnButton {
   position: absolute;
-  top: 18%;
-  left: 3%;
+  top: 11%;
+  left: 22%;
   z-index: 5;
 }
 #returnButton.hidden {
