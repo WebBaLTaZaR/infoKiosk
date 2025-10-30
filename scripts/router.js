@@ -20,7 +20,6 @@ async function loadPage(page, params = {}) {
 
   toggleBackButton(page);
 
-  // 👇 ждём пока DOM обновится
   await new Promise(requestAnimationFrame);
 
   initPage(page, params);
@@ -54,7 +53,7 @@ async function loadHouses() {
 
     container.innerHTML = data
       .map(
-        item => `
+        (item) => `
         <button class="otherServiceItem">
           <img src="assets/img/square.svg" alt="иконка">
           ${item.name}
@@ -70,8 +69,6 @@ async function loadHouses() {
   }
 }
 
-
-// Переключатель кнопки "Назад"
 function toggleBackButton(page) {
   if (page === "home") {
     returnBtn.classList.add("hidden");
@@ -80,7 +77,6 @@ function toggleBackButton(page) {
   }
 }
 
-// Кнопка "Назад"
 returnBtn.addEventListener("click", () => {
   if (historyStack.length > 1) {
     historyStack.pop();
@@ -96,7 +92,7 @@ function initPage(page, params) {
   console.log("initPage вызван для:", page);
   if (page === "home") {
     const serviceButtons = document.querySelectorAll(".service");
-    serviceButtons.forEach(btn => {
+    serviceButtons.forEach((btn) => {
       btn.addEventListener("click", async () => {
         const section = btn.textContent.trim();
 
@@ -114,7 +110,6 @@ function initPage(page, params) {
   }
 }
 
-
 // Загрузка первой страницы при старте
 loadPage("home");
 
@@ -127,7 +122,9 @@ async function loadOtherServices(sectionName) {
 
   try {
     const res = await fetch(
-      `http://localhost:3000/api/services?section=${encodeURIComponent(sectionName)}&filial=333`
+      `http://localhost:3000/api/services?section=${encodeURIComponent(
+        sectionName
+      )}&filial=333`
     );
 
     const data = await res.json();
@@ -139,7 +136,7 @@ async function loadOtherServices(sectionName) {
 
     container.innerHTML = data
       .map(
-        item => `
+        (item) => `
         <button class="otherServiceItem">
           <img src="assets/img/square.svg" alt="иконка">
           ${item.name}
@@ -156,22 +153,31 @@ async function loadOtherServices(sectionName) {
 }
 function adjustServiceLayout() {
   const container = document.querySelector(".listServices");
-  if (!container) return; // 🧩 Безопасный выход, если блока нет
+  if (!container) return;
 
   const items = container.querySelectorAll(".otherServiceItem");
   const count = items.length;
 
   container.style.display = "grid";
   container.style.gap = "20px";
+  container.classList.remove("compact", "tiny");
 
   if (count <= 4) {
     container.style.gridTemplateColumns = "1fr";
-    container.style.gridTemplateRows = `repeat(${count}, 1fr)`;
   } else if (count <= 8) {
     container.style.gridTemplateColumns = "repeat(2, 1fr)";
   } else if (count <= 12) {
     container.style.gridTemplateColumns = "repeat(3, 1fr)";
   } else {
-    container.style.gridTemplateColumns = "repeat(4, 1fr)";
+    container.style.gridTemplateColumns = "repeat(3, 1fr)";
+  }
+  const scale = Math.max(1, Math.min(1, 12 / count));
+  container.style.transform = `scale(${scale})`;
+  container.style.transformOrigin = "top center";
+
+  if (count > 12 && count <= 20) {
+    container.classList.add("compact");
+  } else if (count > 20) {
+    container.classList.add("tiny");
   }
 }
